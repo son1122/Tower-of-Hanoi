@@ -16,6 +16,9 @@
   height: 90vh;
   margin: 10px;
   padding: 10px;
+  display: flex;
+  flex-direction: column;
+  justify-content: end;
   border: 1px solid black;
 }
 canvas{

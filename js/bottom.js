@@ -1,4 +1,4 @@
- let disk = 4
+ let disk = 3
 
  function initial(){
     for(let i=1;i<=disk;i++){
@@ -7,8 +7,8 @@
     node.setAttribute("id",i)
     node.setAttribute("style","border:1px solid #d3d3d3;")
     node.append(text)
-    // node.setAttribute("draggable","true")
-    // node.setAttribute("ondragstart","drag(event)")
+    node.setAttribute("draggable","false")
+    node.setAttribute("ondragstart","drag(event)")
 
         var ctx = node.getContext("2d");
     ctx.font = "50px Arial";
