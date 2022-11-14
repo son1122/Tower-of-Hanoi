@@ -10,7 +10,14 @@
 /* ==========================================================================
    Base styles: opinionated defaults
    ========================================================================== */
-
+#div1, #div2 ,#div3{
+  float: left;
+  width: 30%;
+  height: 35px;
+  margin: 10px;
+  padding: 10px;
+  border: 1px solid black;
+}
 html {
   color: #222;
   font-size: 1em;
