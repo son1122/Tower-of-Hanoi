@@ -13,10 +13,14 @@
 #div1, #div2 ,#div3{
   float: left;
   width: 30%;
-  height: 35px;
+  height: 70vh;
   margin: 10px;
   padding: 10px;
   border: 1px solid black;
+  height: 80%;
+}
+#mainGame{
+  height: 90vh;
 }
 html {
   color: #222;

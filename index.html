@@ -44,13 +44,16 @@
     </div>
   </div>
 </nav>
+<div class="containner-fluid" #="mainGame">
   <div id="div1" ondrop="drop(event)" ondragover="allowDrop(event)">
+    <img src="tile.png" draggable="true" ondragstart="drag(event)" id="drag3" width="88" height="31">
+  </div>
+  <div id="div2" ondrop="drop(event)" ondragover="allowDrop(event)">
+    <img src="tile.png" draggable="true" ondragstart="drag(event)" id="drag2" width="88" height="31">
     <img src="tile.png" draggable="true" ondragstart="drag(event)" id="drag1" width="88" height="31">
   </div>
-
-  <div id="div2" ondrop="drop(event)" ondragover="allowDrop(event)"></div>
   <div id="div3" ondrop="drop(event)" ondragover="allowDrop(event)"></div>
-
+</div>
 </body>
 
 </html>
