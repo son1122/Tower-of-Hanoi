@@ -38,8 +38,12 @@ colorarr()
     ctx.font = "50px Arial";
         ctx.textBaseline = 'middle';
         ctx.textAlign = 'center';
+        ctx.strokeStyle = arrayColor[i]
         ctx.fillStyle = arrayColor[i]
-        ctx.fillRect((screenwidth*0.4-(squarewidth*0.5)), 0, squarewidth, 300);
+        ctx.beginPath();
+        ctx.roundRect((screenwidth*0.4-(squarewidth*0.5)), 0, squarewidth, 300,[20,20,20,20])
+        ctx.stroke();
+        ctx.fill();
         ctx.fillStyle = "white"
         ctx.fillText(i, 150, 80);
     document.querySelector("#pollOne").append(node)
