@@ -1,5 +1,5 @@
 <!doctype html>
-<html class="no-js" lang="">
+<html class="no-js" lang="en">
 
 <head>
     <meta charset="utf-8">
@@ -20,25 +20,21 @@
 
 <body>
 <nav class="navbar bg-light">
-  <div class="container-fluid">
-    <button class="btn btn-outline-success" id="clearBtn">Clear</button>
-    <button class="btn btn-outline-success">Solve</button>
+    <button class="btn btn-primary" id="clearBtn">Clear</button>
+    <button class="btn btn-primary">Log</button>
       <a class="navbar-brand" href="#">Time</a>
     <form class="d-flex" role="search">
-      <input class="form-control me-2" type="search" placeholder="Search" aria-label="Search">
-      <button class="btn btn-outline-success" type="submit">Search</button>
+      <input id="disk" class="form-control" type="text" placeholder="Input Number of Disk" aria-label="Input Number of Disk">
+      <button id="diskNum" class="btn btn-primary" type="submit">Submit</button>
     </form>
-  </div>
 </nav>
-<div class="containner-fluid align-items-center justify-content-center" #="mainGame">
-
+<div id="main">
   <div id="pollOne" ondrop="drop(event)" ondragover="allowDrop(event)">
   </div>
   <div id="pollTwo" ondrop="drop(event)" ondragover="allowDrop(event)">
   </div>
   <div id="pollThree" ondrop="drop(event)" ondragover="allowDrop(event)">
-
- </div>
+  </div>
 </div>
 <script src="js/bottom.js"></script>
 </body>
