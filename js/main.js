@@ -1,3 +1,4 @@
+let changetime
 function allowDrop(ev) {
     ev.preventDefault();
 }
@@ -12,8 +13,6 @@ function drop(ev) {
         if (ev.target.firstChild.id < ev.dataTransfer.getData("text")) {
             console.log("I cannot")
         } else {
-            console.log(ev.target.firstChild.id)
-            console.log(ev.target.id)
             var data = ev.dataTransfer.getData("text");
             ev.target.prepend(document.getElementById(data));
             setDragAllPole()
@@ -37,6 +36,7 @@ function setDragAllPole(ev){
     }
 }
 function clear() {
+    clearInterval(changetime)
     document.querySelector("#main").innerHTML =""
     document.querySelector("#main").innerHTML = '<div id="pollOne" ondrop="drop(event)" ondragover="allowDrop(event)">\n' +
         '  </div>\n' +
@@ -44,5 +44,6 @@ function clear() {
         '  </div>\n' +
         '  <div id="pollThree" ondrop="drop(event)" ondragover="allowDrop(event)">\n' +
         '  </div>'
+        clearInterval(changetime)
         initial()
 }
