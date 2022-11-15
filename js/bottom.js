@@ -1,27 +1,31 @@
 // rainbow color whell https://krazydad.com/tutorials/makecolors.php
 // rgbToHex() function https://stackoverflow.com/a/19765382
-let disk = 3
+let disk = 4
 let arrayColor =[]
 let colordisk = disk +1
 let phase = 6
+function colorarr () {
     if (phase == undefined) phase = 0;
+    colordisk = parseInt(disk) +1
+    arrayColor =[]
     center = 128;
     width = 127;
-    frequency = Math.PI*2/colordisk;
-    for (var i = 0; i < colordisk; ++i)
-    {
-        red   = Math.sin(frequency*i+2+phase) * width + center;
-        green = Math.sin(frequency*i+0+phase) * width + center;
-        blue  = Math.sin(frequency*i+4+phase) * width + center;
-        arrayColor.push(rgbToHex(red,green,blue))
+    frequency = Math.PI * 2 / colordisk;
+    for (var i = 0; i < colordisk; ++i) {
+        red = Math.sin(frequency * i + 2 + phase) * width + center;
+        green = Math.sin(frequency * i + 0 + phase) * width + center;
+        blue = Math.sin(frequency * i + 4 + phase) * width + center;
+        arrayColor.push(rgbToHex(red, green, blue))
     }
+    console.log(arrayColor )
+}
+colorarr()
  function initial(){
-        // if(document.querySelector("#disk").value <1 ){
-        //     disk = document.querySelector("#disk").value
-        // }else {
-        //     disk =3
-        // }
+     let screenwidth = document.querySelector("#pollOne").clientWidth
+     let screenheight = document.querySelector("#pollOne").clientHeight
+
     for(let i=1;i<=disk;i++){
+        let squarewidth = (screenwidth/(1.3*disk)) * i
     let node = document.createElement("canvas")
         let text = document.createTextNode("Your browser does not support the HTML canvas tag.")
     node.setAttribute("id",i)
@@ -35,7 +39,7 @@ let phase = 6
         ctx.textBaseline = 'middle';
         ctx.textAlign = 'center';
         ctx.fillStyle = arrayColor[i]
-        ctx.fillRect(0, 0, 300, 300);
+        ctx.fillRect((screenwidth*0.4-(squarewidth*0.5)), 0, squarewidth, 300);
         ctx.fillStyle = "white"
         ctx.fillText(i, 150, 80);
     document.querySelector("#pollOne").append(node)
@@ -55,6 +59,13 @@ function rgbToHex(red, green, blue) {
 }
  initial()
 document.querySelector("#clearBtn").addEventListener("click",clear)
-document.querySelector("#diskNum").addEventListener("click",clear)
+document.querySelector("#diskNum").addEventListener("click",()=>{
+    clear()
+    disk = document.querySelector("#disk").value
+    console.log(disk)
+    colorarr()
+    initial()
+    clear()
+})
 
 

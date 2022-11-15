@@ -37,15 +37,6 @@ function setDragAllPole(ev){
     }
 }
 function clear() {
-    // while (document.querySelector("#pollOne").firstChild) {
-    //     document.querySelector("#pollOne").removeChild(document.querySelector("#pollOne").lastChild);
-    // }
-    // while (document.querySelector("#pollTwo").firstChild) {
-    //     document.querySelector("#pollTwo").removeChild(document.querySelector("#pollTwo").lastChild);
-    // }
-    // while (document.querySelector("#pollThree").firstChild) {
-    //     document.querySelector("#pollThree").removeChild(document.querySelector("#pollThree").lastChild);
-    // }
     document.querySelector("#main").innerHTML =""
     document.querySelector("#main").innerHTML = '<div id="pollOne" ondrop="drop(event)" ondragover="allowDrop(event)">\n' +
         '  </div>\n' +
