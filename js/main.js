@@ -1,4 +1,6 @@
 let changetime
+let move = 0
+
 function allowDrop(ev) {
     ev.preventDefault();
 }
@@ -12,10 +14,13 @@ function drop(ev) {
     if (ev.target.id === "pollOne" || ev.target.id === "pollTwo" || ev.target.id === "pollThree") {
         if (ev.target.firstChild.id < ev.dataTransfer.getData("text")) {
             console.log("I cannot")
+            document.querySelector("#response").innerHTML = "Cannot Place Here"
         } else {
             var data = ev.dataTransfer.getData("text");
             ev.target.prepend(document.getElementById(data));
             setDragAllPole()
+            move += 1
+            document.querySelector("#Count").innerHTML = "Count Move : "+move
             checkWin()
         }
     }
@@ -36,6 +41,8 @@ function setDragAllPole(ev){
     }
 }
 function clear() {
+    move =0
+
     clearInterval(changetime)
     document.querySelector("#main").innerHTML =""
     document.querySelector("#main").innerHTML = '<div id="pollOne" ondrop="drop(event)" ondragover="allowDrop(event)">\n' +

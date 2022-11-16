@@ -32,6 +32,8 @@ function colorarr () {
 }
 colorarr()
  function initial(){
+     document.querySelector("#Count").innerHTML = "Count Move : 0"
+     document.querySelector("#response").innerHTML = "Start"
      time = disk*50
      clearInterval(changetime)
      changetime = setInterval(()=>{
@@ -39,7 +41,7 @@ colorarr()
          time -=1
          if(time <=0 ){
              clearInterval(changetime)
-             alert("You Loose")
+             document.querySelector("#response").innerHTML = "Time Out"
          }
      },1000)
      let screenwidth = document.querySelector("#pollOne").clientWidth
@@ -75,6 +77,7 @@ colorarr()
          if(numb == disk){
              let score = time
              let maxscore = disk*50
+             document.querySelector("#response").innerHTML = "We are The Champion"
              alert("You win your score is "+score+" Out of "+maxscore);
              addPlayer(score,maxscore)
              setStoragePlayer()
@@ -129,6 +132,9 @@ document.querySelector("#diskNum").addEventListener("click",(e)=>{
     e.preventDefault()
     clear()
     disk = document.querySelector("#disk").value
+    if(disk<1){
+        disk =1
+    }
     colorarr()
     initial()
     clear()
