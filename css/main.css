@@ -3,7 +3,7 @@
   width: 26%;
   height: 90vh;
   margin-top: 1%;
-  margin-left: 7%;
+  margin-left: 8.5%;
   padding: 10px;
   display: flex;
   flex-direction: column;
@@ -11,6 +11,12 @@
   border: 1px solid black;
   align-content: center;
   background-color: white;
+  /*flex-wrap: nowrap;*/
+  /*overflow: scroll;*/
+  overflow: auto;
+}
+#main{
+  overflow: hidden;
 }
 #pollOne{
   margin-left: 2.5%;
@@ -23,6 +29,8 @@ canvas{
   left: 0;
   /*margin-top: 2px;*/
   /*margin-bottom: 12px;*/
+  display: flex;
+  overflow: scroll;
 }
 #mainGame{
   height: 100vh;
@@ -37,17 +45,43 @@ body{
   align-content: center;
 
 }
+.modal {
+  display: none; /* Hidden by default */
+  position: fixed; /* Stay in place */
+  z-index: 1; /* Sit on top */
+  padding-top: 100px; /* Location of the box */
+  left: 0;
+  top: 0;
+  width: 100%; /* Full width */
+  height: 100%; /* Full height */
+  overflow: auto; /* Enable scroll if needed */
+  background-color: rgb(0,0,0); /* Fallback color */
+  background-color: rgba(0,0,0,0.4); /* Black w/ opacity */
+}
 
-/*
- * Remove text-shadow in selection highlight:
- * https://twitter.com/miketaylr/status/12228805301
- *
- * Vendor-prefixed and regular ::selection selectors cannot be combined:
- * https://stackoverflow.com/a/16982510/7133471
- *
- * Customize the background color to match your design.
- */
+/* Modal Content */
+.modal-content {
+  background-color: #fefefe;
+  margin: auto;
+  padding: 20px;
+  border: 1px solid #888;
+  width: 80%;
+}
 
+/* The Close Button */
+.close {
+  color: #aaaaaa;
+  float: right;
+  font-size: 28px;
+  font-weight: bold;
+}
+
+.close:hover,
+.close:focus {
+  color: #000;
+  text-decoration: none;
+  cursor: pointer;
+}
 ::-moz-selection {
   background: #b3d4fc;
   text-shadow: none;

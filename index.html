@@ -21,7 +21,7 @@
 <body>
 <nav class="navbar bg-light">
     <button class="btn btn-primary" id="clearBtn">Clear</button>
-<!--    <button class="btn btn-primary">Log</button>-->
+    <button class="btn btn-primary" id="score">Scoring</button>
       <p class="navbar-brand" id="time" href="#">Time = 180</p>
     <form class="d-flex" role="search">
       <input id="disk" class="form-control" type="text" placeholder="Input Number of Disk" aria-label="Input Number of Disk">
@@ -35,6 +35,15 @@
   </div>
   <div id="pollThree" ondrop="drop(event)" ondragover="allowDrop(event)">
   </div>
+</div>
+<div id="myModal" class="modal">
+    <div class="modal-content">
+        <span class="close">&times;</span>
+        <ul id="scoreList">
+
+        </ul>
+    </div>
+
 </div>
 <script src="js/bottom.js"></script>
 </body>

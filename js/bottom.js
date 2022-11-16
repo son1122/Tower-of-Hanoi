@@ -1,10 +1,13 @@
 // rainbow color whell https://krazydad.com/tutorials/makecolors.php
 // rgbToHex() function https://stackoverflow.com/a/19765382
+// how to make modal https://www.w3schools.com/howto/howto_css_modals.asp
+// json storage https://stackoverflow.com/questions/50041326/localstorage-array-sorting
 let disk = 4
 let arrayColor =[]
 let colordisk = disk +1
 let phase = 6
 let time = 200
+allPlayers = {};
 function newgame(){
     console.log("We are the Champion")
     clearInterval(changetime)
@@ -69,17 +72,57 @@ colorarr()
  function checkWin() {
      let numb = document.querySelector("#pollThree").children.length;
          if(numb == disk){
-             alert("You win your score is "+time+" Out of "+disk*50);
+             let score = time
+             let maxscore = disk*50
+             alert("You win your score is "+score+" Out of "+maxscore);
+             addPlayer(score,maxscore)
+             setStoragePlayer()
+             getStoragePlayer()
              newgame()
          }
-
  }
 function rgbToHex(red, green, blue) {
     const rgb = (red << 16) | (green << 8) | (blue << 0);
     return '#' + (0x1000000 + rgb).toString(16).slice(1);
 }
+if (typeof(Storage) !== "undefined") {
+    if(localStorage.getItem("hasData")){
+        // disk = localStorage.getItem("disk")
+        // time = localStorage.getItem("time")
+        initial()
+    }else{
+        localStorage.setItem("hasData", true);
+        initial()
+    }
+} else {
+    initial()
+}
+var modal = document.getElementById("myModal");
+var btn = document.getElementById("score");
+var span = document.getElementsByClassName("close")[0];
+btn.onclick = function() {
+    document.querySelector("#scoreList").innerHTML=""
+    modal.style.display = "block";
+    let player = getStoragePlayer()
+    let i =1
+    for (var key in player) {
+        console.log(key +"and"+ player[key])
+        let node = document.createElement("li")
+        let text = document.createTextNode(i+". Name : "+key+" Score : "+player[key])
+        node.append(text)
+        document.querySelector("#scoreList").append(node)
+        i++
+    }
 
-initial()
+}
+span.onclick = function() {
+    modal.style.display = "none";
+}
+window.onclick = function(event) {
+    if (event.target == modal) {
+        modal.style.display = "none";
+    }
+}
 document.querySelector("#clearBtn").addEventListener("click",clear)
 document.querySelector("#diskNum").addEventListener("click",(e)=>{
     e.preventDefault()
@@ -89,5 +132,35 @@ document.querySelector("#diskNum").addEventListener("click",(e)=>{
     initial()
     clear()
 })
+
+function showScore(){
+    getStoragePlayer();
+    addPlayer();
+    setStoragePlayer();
+}
+
+function addPlayer(score,maxscore){ //Adds a player to the array with score and name
+    let name = prompt("What's your name")
+    allPlayers[name] = score+"/"+maxscore;
+    // addPlayer[name] = maxscore
+}
+
+function setStoragePlayer(){ // Sends the array to the cloud for saving
+    var sortedPlayers = allPlayers//.sort(function(a, b){
+    //     return b.score - a.score
+    // });
+    localStorage.setItem("PlayerArray", JSON.stringify(sortedPlayers));
+}
+
+function getStoragePlayer() { // Downloads the array from the cloud
+    if (localStorage.PlayerArray != null) {
+        allPlayers = JSON.parse(localStorage.getItem("PlayerArray"));
+        console.log(allPlayers)
+        return allPlayers
+    }
+}
+
+
+
 
 
