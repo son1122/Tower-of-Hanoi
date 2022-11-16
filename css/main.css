@@ -1,3 +1,6 @@
+.navbar-custom {
+  background-color: lightgreen;
+}
 #pollOne,#pollTwo,#pollThree{
   float: left;
   width: 26%;
@@ -11,8 +14,6 @@
   border: 1px solid black;
   align-content: center;
   background-color: white;
-  /*flex-wrap: nowrap;*/
-  /*overflow: scroll;*/
   overflow: auto;
 }
 #main{
@@ -27,8 +28,6 @@ canvas{
   position: relative;
   bottom: 0;
   left: 0;
-  /*margin-top: 2px;*/
-  /*margin-bottom: 12px;*/
   display: flex;
   overflow: scroll;
 }
@@ -46,20 +45,18 @@ body{
 
 }
 .modal {
-  display: none; /* Hidden by default */
-  position: fixed; /* Stay in place */
-  z-index: 1; /* Sit on top */
-  padding-top: 100px; /* Location of the box */
+  display: none;
+  position: fixed;
+  z-index: 1;
+  padding-top: 100px;
   left: 0;
   top: 0;
-  width: 100%; /* Full width */
-  height: 100%; /* Full height */
-  overflow: auto; /* Enable scroll if needed */
-  background-color: rgb(0,0,0); /* Fallback color */
-  background-color: rgba(0,0,0,0.4); /* Black w/ opacity */
+  width: 100%;
+  height: 100%;
+  overflow: auto;
+  background-color: rgb(0,0,0);
+  background-color: rgba(0,0,0,0.4);
 }
-
-/* Modal Content */
 .modal-content {
   background-color: #fefefe;
   margin: auto;
@@ -67,8 +64,6 @@ body{
   border: 1px solid #888;
   width: 80%;
 }
-
-/* The Close Button */
 .close {
   color: #aaaaaa;
   float: right;
@@ -92,9 +87,6 @@ body{
   text-shadow: none;
 }
 
-/*
- * A better looking default horizontal rule
- */
 
 hr {
   display: block;
@@ -105,11 +97,6 @@ hr {
   padding: 0;
 }
 
-/*
- * Remove the gap between audio, canvas, iframes,
- * images, videos and the bottom of their containers:
- * https://github.com/h5bp/html5-boilerplate/issues/440
- */
 
 audio,
 canvas,
@@ -120,9 +107,6 @@ video {
   vertical-align: middle;
 }
 
-/*
- * Remove default fieldset styles.
- */
 
 fieldset {
   border: 0;
@@ -146,14 +130,8 @@ textarea {
   position: absolute;
   white-space: nowrap;
   width: 1px;
-  /* 1 */
 }
 
-/*
- * Extends the .sr-only class to allow the element
- * to be focusable when navigated to via the keyboard:
- * https://www.drupal.org/node/897638
- */
 
 .sr-only.focusable:active,
 .sr-only.focusable:focus {
@@ -180,36 +158,20 @@ textarea {
   clear: both;
 }
 
-/* ==========================================================================
-   EXAMPLE Media Queries for Responsive Design.
-   These examples override the primary ('mobile first') styles.
-   Modify as content requires.
-   ========================================================================== */
-
 @media only screen and (min-width: 35em) {
-  /* Style adjustments for viewports that meet the condition */
 }
 
 @media print,
   (-webkit-min-device-pixel-ratio: 1.25),
   (min-resolution: 1.25dppx),
   (min-resolution: 120dpi) {
-  /* Style adjustments for high resolution devices */
 }
-
-/* ==========================================================================
-   Print styles.
-   Inlined to avoid the additional HTTP request:
-   https://www.phpied.com/delay-loading-your-print-css/
-   ========================================================================== */
-
 @media print {
   *,
   *::before,
   *::after {
     background: #fff !important;
     color: #000 !important;
-    /* Black prints faster */
     box-shadow: none !important;
     text-shadow: none !important;
   }
@@ -227,10 +189,6 @@ textarea {
     content: " (" attr(title) ")";
   }
 
-  /*
-   * Don't show links that are fragment identifiers,
-   * or use the `javascript:` pseudo protocol
-   */
   a[href^="#"]::after,
   a[href^="javascript:"]::after {
     content: "";
@@ -245,11 +203,6 @@ textarea {
     border: 1px solid #999;
     page-break-inside: avoid;
   }
-
-  /*
-   * Printing Tables:
-   * https://web.archive.org/web/20180815150934/http://css-discuss.incutio.com/wiki/Printing_Tables
-   */
   thead {
     display: table-header-group;
   }
