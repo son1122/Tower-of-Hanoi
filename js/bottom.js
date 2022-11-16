@@ -2,6 +2,7 @@
 // rgbToHex() function https://stackoverflow.com/a/19765382
 // how to make modal https://www.w3schools.com/howto/howto_css_modals.asp
 // json storage https://stackoverflow.com/questions/50041326/localstorage-array-sorting
+// Tower of Hanoi https://www.geeksforgeeks.org/c-program-for-tower-of-hanoi/
 let disk = 4
 let arrayColor =[]
 let colordisk = disk +1
@@ -159,8 +160,30 @@ function getStoragePlayer() { // Downloads the array from the cloud
         return allPlayers
     }
 }
+function towerOfHanoi(n, from_rod,  to_rod,  aux_rod)
+{
+    if (n == 0)
+    {
+        return;
+    }
+    towerOfHanoi(n - 1, from_rod, aux_rod, to_rod);
+    console.log("Move disk " + n + " from rod " + from_rod +
+        " to rod " + to_rod);
+    // setTimeout(()=>{
+    // sleep(1000)
+    setTimeout(1000)
+    document.getElementById(to_rod).prepend(document.getElementById(from_rod).children[0])
+    setTimeout(1000)
+        // sleep(2000).then(() => { document.getElementById(to_rod).prepend(document.getElementById(from_rod).children[0])});
+    //     sleep(1000);
+    // },1000)
+    // sleep(1000)
+    towerOfHanoi(n - 1, aux_rod, to_rod, from_rod);
+}
 
-
-
-
-
+// This code is contributed by gauravrajput1
+document.querySelector("#solve").addEventListener("click",()=>{
+    clear()
+    let N = disk
+    towerOfHanoi(N, 'pollOne', 'pollThree', 'pollTwo');
+})
