@@ -94,7 +94,6 @@ function getStoragePlayer() { // Downloads the array from the cloud
 function sleep(time) {
     return new Promise((resolve) => setTimeout(resolve, time));
 }
-
 function towerOfHanoiNonRecursive(n) {
     let i = 0, j = 0, k = 0
     let temp1 = 0, diskloop = 0
@@ -107,27 +106,27 @@ function towerOfHanoiNonRecursive(n) {
             k = k / 2;
         }
         if ((k + 1) / 2 % 3 == 0) {
-            sleep(500).then(() => {
+            // sleep(500).then(() => {
                 // Do something after the sleep!
                 temp1 = n + 1 - j
                 diskloop = disk - temp1 + 1
                 console.log("%d->A\n", diskloop);
                 document.getElementById("pollOne").prepend(document.getElementById(diskloop))
-            });
+            // });
         } else if ((n + 1 - j) % 2 == 1 && (k + 1) / 2 % 3 == 1 || (n + 1 - j) % 2 == 0 && (k + 1) / 2 % 3 == 2) {
-            sleep(500).then(() => {
+            // sleep(500).then(() => {
                 temp1 = n + 1 - j
                 diskloop = disk - temp1 + 1
                 console.log("%d->B\n", diskloop);
                 document.getElementById("pollThree").prepend(document.getElementById(diskloop))
-            });
+            // });
         } else {
-            sleep(500).then(() => {
+            // sleep(500).then(() => {
                 temp1 = n + 1 - j
                 diskloop = disk - temp1 + 1
                 console.log("%d->C\n", diskloop);
                 document.getElementById("pollTwo").prepend(document.getElementById(diskloop))
-            });
+            // });
         }
     }
 }
