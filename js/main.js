@@ -6,7 +6,7 @@ let colorDisk = disk + 1 //color disk need to be plus 1 because last color array
 let phase = 6 // change start of color base on phase
 let timeScoreFactor = 50 //
 let time = disk * timeScoreFactor// initial time
-let solveDeley = 2000
+let solveDeley = 1000
 let solveN = 1
 allPlayers = {}; // initial object for store and retrieve data from local storage
 function allowDrop(ev) {
@@ -239,4 +239,17 @@ function rgbToHex(red, green, blue) {
     // function to convert rgb to hex format using binary shift >> method
     const rgb = (red << 16) | (green << 8) | (blue << 0);
     return '#' + (0x1000000 + rgb).toString(16).slice(1);
+}
+function transform(elementOri,pollTarget){
+    elementOri = 1
+    let pos = document.getElementById(elementOri).getBoundingClientRect();
+    try{
+        document.getElementById("pollThree").children[0].getBoundingClientRect();
+    }catch (e){
+        document.getElementById("pollThree").getBoundingClientRect();
+    }
+    console.log(pos)
+
+
+
 }
