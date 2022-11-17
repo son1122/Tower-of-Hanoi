@@ -1,7 +1,7 @@
 <h1 style="font-size:300%;"><img width="30" alt="Screenshot 2565-11-16 at 14 05 55" src="https://user-images.githubusercontent.com/76699506/202128460-862a5672-0d1d-408e-9875-bcc2bdc113e1.png"> Project Tower of Hanoi Explain</h1>
 
 
-  This is Tower OF Hanoi Game with some function for everyone to play
+  This is Tower OF Hanoi Game with some function for everyone to play a game
   
 <h3>Feature</h3>
     
