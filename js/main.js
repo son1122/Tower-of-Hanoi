@@ -1,11 +1,13 @@
-let changetime
+let changeTime
 let move = 0
 let disk = 4
-let arrayColor =[]
-let colordisk = disk +1 //color disk need to be plus 1 because last color array gonna be black
+let arrayColor = []
+let colorDisk = disk + 1 //color disk need to be plus 1 because last color array gonna be black
 let phase = 6 // change start of color base on phase
 let timeScoreFactor = 50 //
-let time = disk*timeScoreFactor// initial time
+let time = disk * timeScoreFactor// initial time
+let solveDeley = 2000
+let solveN = 1
 allPlayers = {}; // initial object for store and retrieve data from local storage
 function allowDrop(ev) {
     ev.preventDefault();
@@ -25,54 +27,56 @@ function drop(ev) {
             ev.target.prepend(document.getElementById(data));
             setDragAllPole()
             move += 1
-            document.querySelector("#Count").innerHTML = "Count Move : "+move
+            document.querySelector("#Count").innerHTML = "Count Move : " + move
             checkWin()
         }
     }
 
 }
-function setDragAllPole(ev){
-    document.querySelectorAll("canvas").forEach(loop=>{
-        loop.setAttribute("draggable","false")
+
+function setDragAllPole(ev) {
+    document.querySelectorAll("canvas").forEach(loop => {
+        loop.setAttribute("draggable", "false")
     })
-    if(document.querySelector("#pollOne").children[0]){
-        document.querySelector("#pollOne").children[0].setAttribute("draggable","true")
+    if (document.querySelector("#pollOne").children[0]) {
+        document.querySelector("#pollOne").children[0].setAttribute("draggable", "true")
     }
-    if(document.querySelector("#pollTwo").children[0]){
-        document.querySelector("#pollTwo").children[0].setAttribute("draggable","true")
+    if (document.querySelector("#pollTwo").children[0]) {
+        document.querySelector("#pollTwo").children[0].setAttribute("draggable", "true")
     }
-    if(document.querySelector("#pollThree").children[0]){
-        document.querySelector("#pollThree").children[0].setAttribute("draggable","true")
+    if (document.querySelector("#pollThree").children[0]) {
+        document.querySelector("#pollThree").children[0].setAttribute("draggable", "true")
     }
 }
-function clear() {
-    move =0
 
-    clearInterval(changetime)
-    document.querySelector("#main").innerHTML =""
+function clear() {
+    move = 0
+
+    clearInterval(changeTime)
+    document.querySelector("#main").innerHTML = ""
     document.querySelector("#main").innerHTML = '<div id="pollOne" ondrop="drop(event)" ondragover="allowDrop(event)">\n' +
         '  </div>\n' +
         '  <div id="pollTwo" ondrop="drop(event)" ondragover="allowDrop(event)">\n' +
         '  </div>\n' +
         '  <div id="pollThree" ondrop="drop(event)" ondragover="allowDrop(event)">\n' +
         '  </div>'
-        clearInterval(changetime)
-        initial()
+    clearInterval(changeTime)
+    initial()
 }
 
-function showScore(){
+function showScore() {
     getStoragePlayer();
     addPlayer();
     setStoragePlayer();
 }
 
-function addPlayer(score,maxscore){ //Adds a player to the array with score and name
+function addPlayer(score, maxscore) { //Adds a player to the array with score and name
     let name = prompt("What's your name")
-    allPlayers[name] = score+"/"+maxscore;
+    allPlayers[name] = score + "/" + maxscore;
     // addPlayer[name] = maxscore
 }
 
-function setStoragePlayer(){ // Sends the array to the cloud for saving
+function setStoragePlayer() { // Sends the array to the cloud for saving
     var sortedPlayers = allPlayers//.sort(function(a, b){
     //     return b.score - a.score
     // });
@@ -85,59 +89,88 @@ function getStoragePlayer() { // Downloads the array from the cloud
         return allPlayers
     }
 }
-function towerOfHanoi(n, from_rod,  to_rod,  aux_rod)
-{
-    if (n == 0)
-    {
+
+
+function towerOfHanoiNonRecursive(n) {
+    let i=0, j=0, k=0
+    let temp1=0,diskloop =0
+    n = parseInt(n)
+    for (i = 1; i < 2 ** n; i++) {
+        j = 1;
+        k = i;
+        while (k % 2 == 0) {
+            j++;
+            k = k / 2;
+        }
+        if ((k + 1) / 2 % 3 == 0) {
+            console.log("%d->A\n", n + 1 - j);
+            temp1 = n + 1 - j
+            diskloop = disk-temp1+1
+            document.getElementById("pollOne").prepend(document.getElementById(diskloop))
+        } else if ((n + 1 - j) % 2 == 1 && (k + 1) / 2 % 3 == 1 || (n + 1 - j) % 2 == 0 && (k + 1) / 2 % 3 == 2) {
+            console.log("%d->B\n", n + 1 - j);
+            temp1 = n + 1 - j
+            diskloop = disk-temp1+1
+            document.getElementById("pollThree").prepend(document.getElementById(diskloop))
+        } else {
+            console.log("%d->C\n", n + 1 - j);
+            temp1 = n + 1 - j
+            diskloop = disk-temp1+1
+            document.getElementById("pollTwo").prepend(document.getElementById(diskloop))
+        }
+
+    }
+
+}
+
+function towerOfHanoi(n, from_rod, to_rod, aux_rod) {
+    if (n == 0) {
         return;
     }
     towerOfHanoi(n - 1, from_rod, aux_rod, to_rod);
-    // console.log("Move disk " + n + " from rod " + from_rod +
-    // " to rod " + to_rod);
-    // setTimeout(()=>{
-    // sleep(1000)
-    setTimeout(1000)
-    document.getElementById(to_rod).prepend(document.getElementById(from_rod).children[0])
-    setTimeout(1000)
-    // sleep(2000).then(() => { document.getElementById(to_rod).prepend(document.getElementById(from_rod).children[0])});
-    //     sleep(1000);
-    // },1000)
-    // sleep(1000)
+    setTimeout(() => {
+        document.getElementById(to_rod).prepend(document.getElementById(from_rod).children[0])
+        solveN++
+        console.log(solveDeley * solveN)
+    }, solveDeley * solveN)
     towerOfHanoi(n - 1, aux_rod, to_rod, from_rod);
 }
-function newgame(){
+
+function newgame() {
     // new game function is function for stop time counter and start new game
-    clearInterval(changetime)
-    setTimeout(()=>{
+    clearInterval(changeTime)
+    setTimeout(() => {
         document.querySelector("#diskNum").click()
-    },1)
+    }, 1)
 }
-function colorarr () {
+
+function colorarr() {
     // this function is color generator base on rainbow color and phase of color wheel
     if (phase == undefined) phase = 0;
-    colordisk = parseInt(disk) +1
-    arrayColor =[]
+    colorDisk = parseInt(disk) + 1
+    arrayColor = []
     center = 128;
     width = 127;
-    frequency = Math.PI * 2 / colordisk;
-    for (var i = 0; i < colordisk; ++i) {
+    frequency = Math.PI * 2 / colorDisk;
+    for (var i = 0; i < colorDisk; ++i) {
         red = Math.sin(frequency * i + 2 + phase) * width + center;
         green = Math.sin(frequency * i + 0 + phase) * width + center;
         blue = Math.sin(frequency * i + 4 + phase) * width + center;
         arrayColor.push(rgbToHex(red, green, blue))
     }
 }
+
 function initial() {
     // initial function is for generate html tag and prepend it to html
     document.querySelector("#Count").innerHTML = "Count Move : 0"
     document.querySelector("#response").innerHTML = "Start"
     time = disk * timeScoreFactor
-    clearInterval(changetime)
-    changetime = setInterval(() => {
+    clearInterval(changeTime)
+    changeTime = setInterval(() => {
         document.querySelector("#time").innerHTML = "Time = " + time
         time -= 1
         if (time <= 0) {
-            clearInterval(changetime)
+            clearInterval(changeTime)
             document.querySelector("#response").innerHTML = "Time Out"
         }
     }, 1000)
@@ -173,17 +206,18 @@ function initial() {
 function checkWin() {
     // check is user win by using is child of poll three is equal to disk
     let numb = document.querySelector("#pollThree").children.length;
-    if(numb == disk){
+    if (numb == disk) {
         let score = time
-        let maxscore = disk*timeScoreFactor
+        let maxscore = disk * timeScoreFactor
         document.querySelector("#response").innerHTML = "We are The Champion"
-        alert("You win your score is "+score+" Out of "+maxscore);
-        addPlayer(score,maxscore)
+        alert("You win your score is " + score + " Out of " + maxscore);
+        addPlayer(score, maxscore)
         setStoragePlayer()
         getStoragePlayer()
         newgame()
     }
 }
+
 function rgbToHex(red, green, blue) {
     // function to convert rgb to hex format using binary shift >> method
     const rgb = (red << 16) | (green << 8) | (blue << 0);
