@@ -107,26 +107,34 @@ function towerOfHanoiNonRecursive(n) {
         }
         if ((k + 1) / 2 % 3 == 0) {
             // sleep(500).then(() => {
-                // Do something after the sleep!
+            // setTimeout(function (){
                 temp1 = n + 1 - j
                 diskloop = disk - temp1 + 1
                 console.log("%d->A\n", diskloop);
                 document.getElementById("pollOne").prepend(document.getElementById(diskloop))
+            // },3000)
             // });
+            // setTimeout(3000)
         } else if ((n + 1 - j) % 2 == 1 && (k + 1) / 2 % 3 == 1 || (n + 1 - j) % 2 == 0 && (k + 1) / 2 % 3 == 2) {
             // sleep(500).then(() => {
+            // setTimeout(function (){
                 temp1 = n + 1 - j
                 diskloop = disk - temp1 + 1
                 console.log("%d->B\n", diskloop);
                 document.getElementById("pollThree").prepend(document.getElementById(diskloop))
             // });
+            // },3000)
+            // setTimeout(3000)
         } else {
             // sleep(500).then(() => {
+                // });
+                // setTimeout(function (){
                 temp1 = n + 1 - j
                 diskloop = disk - temp1 + 1
                 console.log("%d->C\n", diskloop);
                 document.getElementById("pollTwo").prepend(document.getElementById(diskloop))
-            // });
+            // },3000)
+            // },3000)
         }
     }
 }
@@ -137,10 +145,11 @@ function towerOfHanoi(n, from_rod, to_rod, aux_rod) {
     }
     towerOfHanoi(n - 1, from_rod, aux_rod, to_rod);
     setTimeout(() => {
+        // console.log(document.getElementById(from_rod).children[0])
         document.getElementById(to_rod).prepend(document.getElementById(from_rod).children[0])
-        solveN++
         console.log(solveDeley * solveN)
     }, solveDeley * solveN)
+    solveN++
     towerOfHanoi(n - 1, aux_rod, to_rod, from_rod);
 }
 

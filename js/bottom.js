@@ -39,8 +39,8 @@ window.onclick = function(event) {
 document.querySelector("#solve").addEventListener("click",()=>{
     clear()
     let N = disk
-    // towerOfHanoi(N, 'pollOne', 'pollThree', 'pollTwo');
-    towerOfHanoiNonRecursive(N)
+    towerOfHanoi(N, 'pollOne', 'pollThree', 'pollTwo');
+    // towerOfHanoiNonRecursive(N)
 })
 
 document.querySelector("#clearBtn").addEventListener("click",clear)
