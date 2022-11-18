@@ -75,7 +75,7 @@ This HTML and CSS is Validate by https://html5.validator.nu/ and https://jigsaw.
 What would you do differently?
 
 
-    I have no idea how to make this in different way
+    Using Keyboard instead of drag and drop
   
   
 What are you most proud of?
