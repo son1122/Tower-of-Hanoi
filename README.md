@@ -87,7 +87,7 @@ What are you most proud of?
 What would you do next?
 
 
-    if possible try to fix bug when press solve button and prepend() can not delay
+    Make an animation when disk move from poll to another poll
   
   
 What did you learn?
