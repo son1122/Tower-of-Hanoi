@@ -55,4 +55,4 @@ document.querySelector("#diskNum").addEventListener("click",(e)=>{
     initial()
     clear()
 })
-transform(1,1)
+// transform(1,1)

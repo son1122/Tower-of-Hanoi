@@ -240,16 +240,21 @@ function rgbToHex(red, green, blue) {
     const rgb = (red << 16) | (green << 8) | (blue << 0);
     return '#' + (0x1000000 + rgb).toString(16).slice(1);
 }
-function transform(elementOri,pollTarget){
-    elementOri = 1
-    let pos = document.getElementById(elementOri).getBoundingClientRect();
-    try{
-        document.getElementById("pollThree").children[0].getBoundingClientRect();
-    }catch (e){
-        document.getElementById("pollThree").getBoundingClientRect();
-    }
-    console.log(pos)
-
-
-
-}
+// function transform(elementOri,pollTarget){
+//     pollTarget = "pollThree"
+//     elementOri = 1
+//     let x = "50px"
+//     let y = "-100px"
+//     let animationTime = solveDeley/1000
+//     animationTime+"s"
+//     let pos = document.getElementById(elementOri)//.getBoundingClientRect();
+//     // pos.style.transform = "translateY("+y+")";
+//     pos.style.transitionProperty = "width , height"
+//     pos.style.transitionDuration = "1s"
+//     try{
+//         document.getElementById(pollTarget).children[0].getBoundingClientRect();
+//     }catch (e){
+//         document.getElementById(pollTarget).getBoundingClientRect();
+//     }
+//     console.log(pos)
+// }
