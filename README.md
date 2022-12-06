@@ -1,24 +1,27 @@
-<h1 style="font-size:300%;"><img width="30" alt="Screenshot 2565-11-16 at 14 05 55" src="https://user-images.githubusercontent.com/76699506/202128460-862a5672-0d1d-408e-9875-bcc2bdc113e1.png"> Project Tower of Hanoi Explain</h1>
+<h1 style="font-size:300%;"><img width="30" alt="Screenshot 2565-11-16 at 14 05 55" src="https://cdn-icons-png.flaticon.com/512/761/761777.png"> Project Tower of Hanoi Explain</h1>
 
 
   This is Tower OF Hanoi Game with some function for everyone to play a game
   
 <h3>Feature</h3>
     
-      1. N number of disk stack
+      1. Playable Beer Distribution Game
+      2. Sale Number That Reatrailer receive is affect by Country Event and Holiday
+      3. Sale Number That Reatrailer receive True random
+      4. 48 Turn Game = year and 1 Turn = 1 weak of the month
+      5. Multiplayer in Local and same screen Fashion
+      6. Each Player COST of operation
+      7. Chart , data and Summary of Each Player
+
+
+<h3>Function</h3>
+  1.API for <a href="https://www.random.org" target="_blank">true random number generator (TRNG)</a>
+     
+  2.API for <a href="https://www.react-google-charts.com" target="_blank">React Chart from Google</a>   
+  3.API for <a href="Holiday DATA by api-ninjas.com" target="_blank">https://api-ninjas.com/api/holidays</a>  
+  4.API for <a href="https://restcountries.com/v3.1/alpha?codes=th" target="_blank">Country DATA by restcountries.com</a>
       
-      2. scoring Board Using local storage
-      
-      3. Solve Function
-      
-      4. Time Base score
-      
-      5. Clear button
-      
-      6. Basic Animation
-      
-      
-      
+
 <img width="1438" alt="Screenshot 2565-11-17 at 13 33 30" src="https://user-images.githubusercontent.com/76699506/202373635-ee114417-0aae-4f57-9902-ff4ee5205cc0.png">
 
 
