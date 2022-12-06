@@ -1,8 +1,15 @@
-<h1 style="font-size:300%;"><img width="30" alt="Screenshot 2565-11-16 at 14 05 55" src="https://cdn-icons-png.flaticon.com/512/761/761777.png"> Project Tower of Hanoi Explain</h1>
+<h1 style="font-size:300%;"><img width="30" alt="Screenshot 2565-11-16 at 14 05 55" src="https://cdn-icons-png.flaticon.com/512/761/761777.png"> Beer Distribution Game</h1>
 
 
   This is Tower OF Hanoi Game with some function for everyone to play a game
   
+  Original Online Multiplay Beer Game : https://beergame.masystem.se/ 
+  
+  
+  ![beerSum](https://user-images.githubusercontent.com/76699506/205786794-7c992902-e741-4b8f-b125-300bd9f73fba.png)
+  ![Beer-Distribution-Game](https://user-images.githubusercontent.com/76699506/205784086-3a7007ea-2d44-43e5-b0b9-7f1aec48a288.png)
+
+
 <h3>Feature</h3>
     
       1. Playable Beer Distribution Game
@@ -16,18 +23,25 @@
 
 <h3>Function</h3>
   1.API for <a href="https://www.random.org" target="_blank">true random number generator (TRNG)</a>
-     
+ 
+![random-dots](https://user-images.githubusercontent.com/76699506/205789100-cd060710-06b0-4c78-9926-30393b5fe812.jpg)
+  
   2.API for <a href="https://www.react-google-charts.com" target="_blank">React Chart from Google</a>   
   3.API for <a href="Holiday DATA by api-ninjas.com" target="_blank">https://api-ninjas.com/api/holidays</a>  
   4.API for <a href="https://restcountries.com/v3.1/alpha?codes=th" target="_blank">Country DATA by restcountries.com</a>
-      
 
-<img width="1438" alt="Screenshot 2565-11-17 at 13 33 30" src="https://user-images.githubusercontent.com/76699506/202373635-ee114417-0aae-4f57-9902-ff4ee5205cc0.png">
+  <img width="885" alt="Screenshot 2565-12-06 at 09 14 06" src="https://user-images.githubusercontent.com/76699506/205792020-87374146-b3ee-45b1-9a86-8e83da6b12ac.png">
+  <img width="874" alt="Screenshot 2565-12-06 at 09 08 56" src="https://user-images.githubusercontent.com/76699506/205791774-c5b7a887-df7e-4412-81b8-85fab7ceef48.png">
+<img width="891" alt="Screenshot 2565-12-06 at 09 09 29" src="https://user-images.githubusercontent.com/76699506/205791784-453e0c73-47bd-439f-bdc0-ee6ea863a2f9.png">
+<img width="869" alt="Screenshot 2565-12-06 at 09 09 34" src="https://user-images.githubusercontent.com/76699506/205791778-47ac464e-f9fc-42af-8da1-d609ceabb10f.png">
 
 
-Netlify Deploy URL : https://jazzy-pothos-22f17c.netlify.app/
+ 
+<h2>Preview</h2>
+<img width="800" style="text-align:center;" alt="Screenshot 2565-12-06 at 07 31 37" src="https://user-images.githubusercontent.com/76699506/205778624-0c5c91cd-4adf-406b-abfc-496e4b8796e3.png">
 
-This HTML and CSS is Validate by https://html5.validator.nu/ and https://jigsaw.w3.org/css-validator/
+
+Netlify Deploy URL : [https://jazzy-pothos-22f17c.netlify.app/](https://beer-distribution-game.netlify.app/)
 
 
 
@@ -36,37 +50,29 @@ This HTML and CSS is Validate by https://html5.validator.nu/ and https://jigsaw.
 
 <h3>1. List All requirement  and draw a Wireframe</h3>
 
-<img width="893" alt="Screenshot 2565-11-14 at 11 22 48" src="https://user-images.githubusercontent.com/76699506/202384544-9d0f543d-b474-43aa-8565-29fc4f636eca.png">
+<img width="844" alt="Screenshot 2565-12-06 at 07 47 10" src="https://user-images.githubusercontent.com/76699506/205792325-e5842228-42b0-4785-8e44-d91f3bf413ac.png">
+<img width="642" alt="Screenshot 2565-12-06 at 07 47 03" src="https://user-images.githubusercontent.com/76699506/205792337-5774d04d-3587-4314-ba6f-1b8a95b1682a.png">
+
 
 <h3>2. make a List of technical difficulties and study all of them</h3>
     
-    2.1 How to make Drag and Drop
+    2.1 LIST All API use in this project
     
-    2.2 How Local Storage Work
+    2.2 How Algo Work
     
-    2.3 How Tower of Hanoi Algorithm work
+    2.3 Basic Graph
     
 <h3>3. make a simple step plan</h3>
 
-    3.1 initial project with HTML5 Boiler Plate
+    3.1 initial project with create-react-app
     
-    3.2 Make a Poll and try drag and drop function
+    3.2 Make Basic UI CSS Layout
     
-    3.3 Make a better UI
+    3.3 Make simple Algo
     
-    3.4 Make it responsive 
+    3.4 make other ui
     
-    3.5 make Time base scoring
-    
-    3.6 make local storage to keep score and player name
-    
-    3.7 make game response
-    
-    3.8 add solve function
-    
-    3.9 try to make solve animation
-    
-    3.10 finish and clean it up
+    3.9 finish and clean it up
 
 
 <h2>Code Explain</h2>
@@ -78,55 +84,25 @@ This HTML and CSS is Validate by https://html5.validator.nu/ and https://jigsaw.
 What would you do differently?
 
 
-    Using Keyboard instead of drag and drop
+    Change The Way Algorithm work
   
   
 What are you most proud of?
 
 
-    study and try to make it work
+     Combine knowledge from financial, simulation and Full stack together
   
   
 What would you do next?
 
 
-    Make an animation when disk move from poll to another poll
+    Test in Multiplayer
   
   
 What did you learn?
 
 
-    1.Mathmetics way to generate rainbow color using sinwave function of different phase of Red green blue and mix them together to create rainbow
+    1.Beer Distribution Game. what is it ? and what it teach us
  
  
-      rainbow color whell https://krazydad.com/tutorials/makecolors.php
-  
-  
-    2.Mathmetic and shift operation to convert binary and create rgb to hex
- 
- 
-      rgbToHex() function https://stackoverflow.com/a/19765382
-  
-  
-    3. how to make modal using css
- 
- 
-      how to make modal https://www.w3schools.com/howto/howto_css_modals.asp
-  
-  
-    4. How to use api for make local and session storage
- 
- 
-      json storage https://stackoverflow.com/questions/50041326/localstorage-array-sorting
-  
-  
-    5. How tower of hanoi work in recursive way of algorthm
- 
- 
-      https://www.geeksforgeeks.org/c-program-for-tower-of-hanoi/
-  
-  
-    6. How tower of hanoi work in non recusrive way
- 
- 
-      https://ieeexplore.ieee.org/document/5578370 Non-recursive Algorithm of Tower of Hanoi Problem Fuwan Ren, Qifan Yang*, Jiexin Zheng, Hui Yan 
+      https://opexlearning.com/resources/the-bullwhip-effect/310/
