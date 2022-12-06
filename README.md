@@ -84,7 +84,11 @@ Netlify Deploy URL : [https://jazzy-pothos-22f17c.netlify.app/](https://beer-dis
 What would you do differently?
 
 
+<<<<<<< HEAD
     Change The Way Algorithm work
+=======
+    I have no idea how to make this in different way
+>>>>>>> parent of 86fce88 (Update README.md)
   
   
 What are you most proud of?
