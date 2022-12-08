@@ -1,100 +1,111 @@
 .navbar-custom {
-  background-color: lightgreen;
+    background-color: lightgreen;
 }
-#pollOne,#pollTwo,#pollThree{
-  float: left;
-  width: 26%;
-  height: 90vh;
-  margin-top: 1%;
-  margin-left: 8.5%;
-  padding: 10px;
-  display: flex;
-  flex-direction: column;
-  justify-content: end;
-  border: 1px solid black;
-  align-content: center;
-  background-color: white;
-  overflow: auto;
+
+#pollOne, #pollTwo, #pollThree {
+    float: left;
+    width: 26%;
+    height: 90vh;
+    margin-top: 1%;
+    margin-left: 8.5%;
+    padding: 10px;
+    display: flex;
+    flex-direction: column;
+    justify-content: end;
+    border: 1px solid black;
+    align-content: center;
+    background-color: white;
+    overflow: auto;
 }
-#main{
-  overflow: hidden;
+
+#main {
+    overflow: hidden;
 }
-#pollOne{
-  margin-left: 2.5%;
+
+#pollOne {
+    margin-left: 2.5%;
 }
-canvas{
-  width: 100%;
-  height: 10vh;
-  position: relative;
-  bottom: 0;
-  left: 0;
-  display: flex;
-  overflow: scroll;
+
+canvas {
+    width: 100%;
+    height: 10vh;
+    position: relative;
+    bottom: 0;
+    left: 0;
+    display: flex;
+    overflow: scroll;
 }
-#mainGame{
-  height: 100vh;
+
+#mainGame {
+    height: 100vh;
 }
+
 html {
-  color: #222;
-  font-size: 1em;
-  line-height: 1.4;
-  background-color: black;
+    color: #222;
+    font-size: 1em;
+    line-height: 1.4;
+    background-color: black;
 }
-body{
-  align-content: center;
+
+body {
+    align-content: center;
 
 }
+
 .modal {
-  display: none;
-  position: fixed;
-  z-index: 1;
-  padding-top: 100px;
-  left: 0;
-  top: 0;
-  width: 100%;
-  height: 100%;
-  overflow: auto;
-  background-color: rgb(0,0,0);
-  background-color: rgba(0,0,0,0.4);
+    display: none;
+    position: fixed;
+    z-index: 1;
+    padding-top: 100px;
+    left: 0;
+    top: 0;
+    width: 100%;
+    height: 100%;
+    overflow: auto;
+    background-color: rgb(0, 0, 0);
+    background-color: rgba(0, 0, 0, 0.4);
 }
+
 .modal-content {
-  background-color: #fefefe;
-  margin: auto;
-  padding: 20px;
-  border: 1px solid #888;
-  width: 80%;
+    background-color: #fefefe;
+    margin: auto;
+    padding: 20px;
+    border: 1px solid #888;
+    width: 80%;
 }
+
 .close {
-  color: #aaaaaa;
-  float: right;
-  font-size: 28px;
-  font-weight: bold;
+    color: #aaaaaa;
+    float: right;
+    font-size: 28px;
+    font-weight: bold;
 }
 
 .close:hover,
 .close:focus {
-  color: #000;
-  text-decoration: none;
-  cursor: pointer;
+    color: #000;
+    text-decoration: none;
+    cursor: pointer;
 }
+
 ::-moz-selection {
-  background: #b3d4fc;
-  text-shadow: none;
+    background: #b3d4fc;
+    text-shadow: none;
 }
 
 ::selection {
-  background: #b3d4fc;
-  text-shadow: none;
+    background: #b3d4fc;
+    text-shadow: none;
 }
 
 
 hr {
-  display: block;
-  height: 1px;
-  border: 0;
-  border-top: 1px solid #ccc;
-  margin: 1em 0;
-  padding: 0;
+    display: block;
+    height: 1px;
+    border: 0;
+    border-top: 1px solid #ccc;
+    margin: 1em 0;
+    padding: 0;
 }
 
 
@@ -104,124 +115,130 @@ iframe,
 img,
 svg,
 video {
-  vertical-align: middle;
+    vertical-align: middle;
 }
 
 
 fieldset {
-  border: 0;
-  margin: 0;
-  padding: 0;
+    border: 0;
+    margin: 0;
+    padding: 0;
 }
+
 textarea {
-  resize: vertical;
+    resize: vertical;
 }
+
 .hidden,
 [hidden] {
-  display: none !important;
+    display: none !important;
 }
+
 .sr-only {
-  border: 0;
-  clip: rect(0, 0, 0, 0);
-  height: 1px;
-  margin: -1px;
-  overflow: hidden;
-  padding: 0;
-  position: absolute;
-  white-space: nowrap;
-  width: 1px;
+    border: 0;
+    clip: rect(0, 0, 0, 0);
+    height: 1px;
+    margin: -1px;
+    overflow: hidden;
+    padding: 0;
+    position: absolute;
+    white-space: nowrap;
+    width: 1px;
 }
 
 
 .sr-only.focusable:active,
 .sr-only.focusable:focus {
-  clip: auto;
-  height: auto;
-  margin: 0;
-  overflow: visible;
-  position: static;
-  white-space: inherit;
-  width: auto;
+    clip: auto;
+    height: auto;
+    margin: 0;
+    overflow: visible;
+    position: static;
+    white-space: inherit;
+    width: auto;
 }
 
 
 .invisible {
-  visibility: hidden;
+    visibility: hidden;
 }
+
 .clearfix::before,
 .clearfix::after {
-  content: " ";
-  display: table;
+    content: " ";
+    display: table;
 }
 
 .clearfix::after {
-  clear: both;
+    clear: both;
 }
 
 @media only screen and (min-width: 35em) {
 }
 
 @media print,
-  (-webkit-min-device-pixel-ratio: 1.25),
-  (min-resolution: 1.25dppx),
-  (min-resolution: 120dpi) {
+(-webkit-min-device-pixel-ratio: 1.25),
+(min-resolution: 1.25dppx),
+(min-resolution: 120dpi) {
 }
+
 @media print {
-  *,
-  *::before,
-  *::after {
-    background: #fff !important;
-    color: #000 !important;
-    box-shadow: none !important;
-    text-shadow: none !important;
-  }
+    *,
+    *::before,
+    *::after {
+        background: #fff !important;
+        color: #000 !important;
+        box-shadow: none !important;
+        text-shadow: none !important;
+    }
 
-  a,
-  a:visited {
-    text-decoration: underline;
-  }
+    a,
+    a:visited {
+        text-decoration: underline;
+    }
 
-  a[href]::after {
-    content: " (" attr(href) ")";
-  }
+    a[href]::after {
+        content: " (" attr(href) ")";
+    }
 
-  abbr[title]::after {
-    content: " (" attr(title) ")";
-  }
+    abbr[title]::after {
+        content: " (" attr(title) ")";
+    }
 
-  a[href^="#"]::after,
-  a[href^="javascript:"]::after {
-    content: "";
-  }
+    a[href^="#"]::after,
+    a[href^="javascript:"]::after {
+        content: "";
+    }
 
-  pre {
-    white-space: pre-wrap !important;
-  }
+    pre {
+        white-space: pre-wrap !important;
+    }
 
-  pre,
-  blockquote {
-    border: 1px solid #999;
-    page-break-inside: avoid;
-  }
-  thead {
-    display: table-header-group;
-  }
+    pre,
+    blockquote {
+        border: 1px solid #999;
+        page-break-inside: avoid;
+    }
 
-  tr,
-  img {
-    page-break-inside: avoid;
-  }
+    thead {
+        display: table-header-group;
+    }
 
-  p,
-  h2,
-  h3 {
-    orphans: 3;
-    widows: 3;
-  }
+    tr,
+    img {
+        page-break-inside: avoid;
+    }
 
-  h2,
-  h3 {
-    page-break-after: avoid;
-  }
+    p,
+    h2,
+    h3 {
+        orphans: 3;
+        widows: 3;
+    }
+
+    h2,
+    h3 {
+        page-break-after: avoid;
+    }
 }
 

@@ -3,10 +3,10 @@
 <h1 style="font-size:300%;"><img width="30" alt="Screenshot 2565-11-16 at 14 05 55" src="https://user-images.githubusercontent.com/76699506/202128460-862a5672-0d1d-408e-9875-bcc2bdc113e1.png"> Project Tower of Hanoi Explain</h1>
 
 
-  This is Tower OF Hanoi Game with some function for everyone to play a game
-  
+This is Tower OF Hanoi Game with some function for everyone to play a game
+
 <h3>Feature</h3>
-    
+
       1. N number of disk stack
       
       2. scoring Board Using local storage
@@ -18,9 +18,7 @@
       5. Clear button
       
       6. Basic Animation
-      
-      
-      
+
 <img width="1438" alt="Screenshot 2565-11-17 at 13 33 30" src="https://user-images.githubusercontent.com/76699506/202373635-ee114417-0aae-4f57-9902-ff4ee5205cc0.png">
 
 
@@ -28,23 +26,20 @@ Netlify Deploy URL : https://jazzy-pothos-22f17c.netlify.app/
 
 This HTML and CSS is Validate by https://html5.validator.nu/ and https://jigsaw.w3.org/css-validator/
 
-
-
-
 <h2>My Planing Step</h2>
 
-<h3>1. List All requirement  and draw a Wireframe</h3>
+<h3>1. List All requirement and draw a Wireframe</h3>
 
 <img width="893" alt="Screenshot 2565-11-14 at 11 22 48" src="https://user-images.githubusercontent.com/76699506/202384544-9d0f543d-b474-43aa-8565-29fc4f636eca.png">
 
 <h3>2. make a List of technical difficulties and study all of them</h3>
-    
+
     2.1 How to make Drag and Drop
     
     2.2 How Local Storage Work
     
     2.3 How Tower of Hanoi Algorithm work
-    
+
 <h3>3. make a simple step plan</h3>
 
     3.1 initial project with HTML5 Boiler Plate
@@ -67,7 +62,6 @@ This HTML and CSS is Validate by https://html5.validator.nu/ and https://jigsaw.
     
     3.10 finish and clean it up
 
-
 <h2>Code Explain</h2>
 
 <img width="1196" alt="Screenshot 2565-11-17 at 14 32 53" src="https://user-images.githubusercontent.com/76699506/202384182-6f9ef80a-78ab-4698-8248-d2338e76c763.png">
@@ -76,24 +70,17 @@ This HTML and CSS is Validate by https://html5.validator.nu/ and https://jigsaw.
 
 What would you do differently?
 
-
     I have no idea how to make this in different way
-  
-  
+
 What are you most proud of?
 
-
     study and try to make it work
-  
-  
+
 What would you do next?
 
-
     Make an animation when disk move from poll to another poll
-  
-  
-What did you learn?
 
+What did you learn?
 
     1.Mathmetics way to generate rainbow color using sinwave function of different phase of Red green blue and mix them together to create rainbow
  
@@ -129,4 +116,5 @@ What did you learn?
  
  
       https://ieeexplore.ieee.org/document/5578370 Non-recursive Algorithm of Tower of Hanoi Problem Fuwan Ren, Qifan Yang*, Jiexin Zheng, Hui Yan 
->>>>>>> parent of 86fce88 (Update README.md)
+
+> > > > > > > parent of 86fce88 (Update README.md)

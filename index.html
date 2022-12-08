@@ -4,18 +4,19 @@
 <head>
     <meta charset="utf-8">
     <title>Tower Of Hanoi</title>
-    <meta name="description" content="">
-    <meta name="viewport" content="width=device-width, initial-scale=1">
-    <meta property="og:title" content="">
-    <meta property="og:type" content="">
-    <meta property="og:url" content="">
-    <meta property="og:image" content="">
-    <link rel="apple-touch-icon" href="icon.png">
-    <link rel="stylesheet" href="css/normalize.css">
-    <link rel="stylesheet" href="css/main.css">
-    <meta name="theme-color" content="#fafafa">
-  <script src="js/main.js"></script>
-  <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.2.2/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-Zenh87qX5JnK2Jl0vWa8Ck2rdkQ2Bzep5IDxbcnCeuOxjzrPF/et3URy9Bv1WTRi" crossorigin="anonymous">
+    <meta content="" name="description">
+    <meta content="width=device-width, initial-scale=1" name="viewport">
+    <meta content="" property="og:title">
+    <meta content="" property="og:type">
+    <meta content="" property="og:url">
+    <meta content="" property="og:image">
+    <link href="icon.png" rel="apple-touch-icon">
+    <link href="css/normalize.css" rel="stylesheet">
+    <link href="css/main.css" rel="stylesheet">
+    <meta content="#fafafa" name="theme-color">
+    <script src="js/main.js"></script>
+    <link crossorigin="anonymous" href="https://cdn.jsdelivr.net/npm/bootstrap@5.2.2/dist/css/bootstrap.min.css"
+          integrity="sha384-Zenh87qX5JnK2Jl0vWa8Ck2rdkQ2Bzep5IDxbcnCeuOxjzrPF/et3URy9Bv1WTRi" rel="stylesheet">
 </head>
 
 <body>
@@ -24,22 +25,23 @@
     <button class="btn btn-primary" id="score">Scoring</button>
     <button class="btn btn-primary" id="solve">Solve</button>
     <p class="navbar-brand" id="time">Time = 200</p>
-      <p class="navbar-brand" id="response">Response</p>
+    <p class="navbar-brand" id="response">Response</p>
     <p class="navbar-brand" id="Count">Count Move : 0</p>
     <form class="d-flex" role="search">
-      <input id="disk" class="form-control" type="text" placeholder="Input Number of Disk" aria-label="Input Number of Disk">
-      <button id="diskNum" class="btn btn-primary" type="submit">Submit</button>
+        <input aria-label="Input Number of Disk" class="form-control" id="disk" placeholder="Input Number of Disk"
+               type="text">
+        <button class="btn btn-primary" id="diskNum" type="submit">Submit</button>
     </form>
 </nav>
 <div id="main">
-  <div id="pollOne" ondrop="drop(event)" ondragover="allowDrop(event)">
-  </div>
-  <div id="pollTwo" ondrop="drop(event)" ondragover="allowDrop(event)">
-  </div>
-  <div id="pollThree" ondrop="drop(event)" ondragover="allowDrop(event)">
-  </div>
+    <div id="pollOne" ondragover="allowDrop(event)" ondrop="drop(event)">
+    </div>
+    <div id="pollTwo" ondragover="allowDrop(event)" ondrop="drop(event)">
+    </div>
+    <div id="pollThree" ondragover="allowDrop(event)" ondrop="drop(event)">
+    </div>
 </div>
-<div id="myModal" class="modal">
+<div class="modal" id="myModal">
     <div class="modal-content">
         <span class="close">&times;</span>
         <ul id="scoreList">
